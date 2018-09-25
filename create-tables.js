@@ -16,10 +16,10 @@ async function createClientTable(){
 }
 
 async function createOrderTable(){
-    var sql = "CREATE TABLE order (id INT AUTO_INCREMENT PRIMARY KEY, client_id INT, type_id INT, quantity INT, description TEXT";
+    var sql = "CREATE TABLE request (id INT AUTO_INCREMENT PRIMARY KEY, payment_method ENUM(\'CASH\', \'TRANSFER\'), is_paid BOOL, client_id INT, type_id INT, quantity INT, description TEXT)";
     connection.query(sql, function (err, result) {
         if (err) throw err;
-        console.log("Table \'order\' created");
+        console.log("Table \'request\' created");
     });  
 }
 
@@ -31,12 +31,15 @@ async function createTypeTable(){
     });
 }
 
-async function createPantryTable(){
-    var sql = "CREATE TABLE pantry (id INT AUTO_INCREMENT PRIMARY KEY, type_id INT, quantity INT)";
+async function createCupboardTable(){
+    var sql = "CREATE TABLE cupboard (id INT AUTO_INCREMENT PRIMARY KEY, type_id INT, quantity INT)";
     connection.query(sql, function (err, result) {
         if (err) throw err;
-        console.log("Table \'pantry\' created");
+        console.log("Table \'cupboard\' created");
     });  
 }
 
 createClientTable()
+createOrderTable()
+createTypeTable()
+createCupboardTable()
