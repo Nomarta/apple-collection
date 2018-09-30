@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Apple Collection</title>
+	</head>
+	<body>
+		<h1>Nowa transakcja</h1>
+		<form>
+			<div>
+				<p>Kto</p>
+				<input id="who" type="text" name="who" required>
+			</div>
+
+			<div>
+				<p>Ile</p>
+				<input id="quantity" type="text" name="quantity" required>
+			</div>
+
+			<div>
+				<p>Za ile</p>
+				<input id="price" type="text" name="price" required>
+			</div>
+
+			<div>
+				<p>Kiedy</p>
+				<input id="date" type="date" name="date">
+			</div>
+
+			<div>
+				<p>Forma płatności</p>
+				<label for="cash"> 
+						<input id="cash" type="radio" name="payment" checked>Gotówka 
+				</label>
+				<label for="transfer"> 
+						<input id="transfer" type="radio" name="payment">Przelew 
+				</label>
+			</div>
+
+			<div>
+				<input type="submit" value="Dodaj">
+			</div>
+		</form>
+	</body>
+</html>

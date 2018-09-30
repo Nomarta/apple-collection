@@ -4,41 +4,31 @@
 		<title>Apple Collection</title>
 	</head>
 	<body>
-		<h1>Apple collection</h1>
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+			<style>
+		.red-text {
+			color: #f91959;
+			font-family: font-family: 'Raleway', sans-serif;
+			font-size: 40px;
+		}
+		.green-button {
+			background-color: #90ba58;
+    		border: 3px solid white; 
+			color: white; 
+			padding: 50px 24px; 
+			cursor: pointer; 
+			float: left;
+		}
+
+			</style>
+		<h1 class="red-text">Apple collection</h1>
 		<form>
 			<div>
-				<p>Kto</p>
-				<input id="who" type="text" name="who" required>
+				<input type="submit" value="Nowa transakcja" class="green-button">
 			</div>
-
 			<div>
-				<p>Ile</p>
-				<input id="quantity" type="text" name="quantity" required>
-			</div>
-
-			<div>
-				<p>Za ile</p>
-				<input id="price" type="text" name="price" required>
-			</div>
-
-			<div>
-				<p>Kiedy</p>
-				<input id="date" type="date" name="date">
-			</div>
-
-			<div>
-				<p>Forma płatności</p>
-				<label for="cash"> 
-						<input id="cash" type="radio" name="payment" checked>Gotówka 
-				</label>
-				<label for="transfer"> 
-						<input id="transfer" type="radio" name="payment">Przelew 
-				</label>
-			</div>
-
-			<div>
-				<input type="submit" value="Dodaj">
+				<input type="submit" value="Nowy użytkownik" class="green-button">
 			</div>
 		</form>
 	</body>
-</html>
+</html>		
