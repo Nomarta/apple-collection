@@ -8,41 +8,42 @@
 				color: #f91959;
 				font-family: font-family: 'Raleway', sans-serif;
 				font-size: 40px;
-				text-align: left;
+				
 			}
 			.green-button {
 				background-color: #90ba58;
 				border: 3px solid white; 
 				color: white; 
-				text-align: center;
+				
 				font-size: 15px;
 				padding: 40px 40px; 
 				cursor: pointer; 
-				float: left;
+				
 				width: 10%;
+			}
+			.center {
+				text-align:center;
+				
 			}
 		</style>
 	</head>
 
 	<body>
-		<h1 class="red-text">Apple collection</h1>
-		<div>
-				
-			<button id="newTransaction" class="green-button">New Transaction</button>
-
+		<h1 class="red-text center">Apple collection</h1>
+		<div class="center">
+			
+				<button id="newTransaction" class="green-button">New Transaction</button>
+			
+				<button id="newClient" class="green-button">New Client</button>
+			
 		</div>
-		<div>
-		<button id="newClient" class="green-button">New Client</button>
-
-		</div>
-
 		<script type="text/javascript">
 			document.getElementById("newTransaction").onclick = function () {
-				location.href = "http://localhost/zamowienie";
+				location.href = "zamowienie";
 			};
 
 			document.getElementById("newClient").onclick = function () {
-				location.href = "http://localhost/nowygosc";
+				location.href = "nowygosc";
 			};
 		</script>
 	</body>
