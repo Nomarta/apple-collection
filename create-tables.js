@@ -39,7 +39,9 @@ async function createRequestTable(){
         id INT AUTO_INCREMENT PRIMARY KEY, 
         payment_method ENUM(\'CASH\', \'TRANSFER\'), 
         is_paid BOOL,  
-        quantity INT, 
+        quantity INT,
+        price INT,
+        date DATE,
         description TEXT,
         client_id INT, FOREIGN KEY fk_client(client_id) REFERENCES client(id) ON UPDATE CASCADE ON DELETE RESTRICT,
         type_id INT, FOREIGN KEY fk_type(type_id) REFERENCES type(id) ON UPDATE CASCADE ON DELETE RESTRICT
