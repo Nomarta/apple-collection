@@ -2,33 +2,48 @@
 <html>
 	<head>
 		<title>Apple Collection</title>
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+		<style type="text/css">
+			.red-text {
+				color: #f91959;
+				font-family: font-family: 'Raleway', sans-serif;
+				font-size: 40px;
+				text-align: left;
+			}
+			.green-button {
+				background-color: #90ba58;
+				border: 3px solid white; 
+				color: white; 
+				text-align: center;
+				font-size: 15px;
+				padding: 40px 40px; 
+				cursor: pointer; 
+				float: left;
+				width: 10%;
+			}
+		</style>
 	</head>
-	<body>
-		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-			<style>
-		.red-text {
-			color: #f91959;
-			font-family: font-family: 'Raleway', sans-serif;
-			font-size: 40px;
-		}
-		.green-button {
-			background-color: #90ba58;
-    		border: 3px solid white; 
-			color: white; 
-			padding: 50px 24px; 
-			cursor: pointer; 
-			float: left;
-		}
 
-			</style>
+	<body>
 		<h1 class="red-text">Apple collection</h1>
-		<form>
-			<div>
-				<input type="submit" value="Nowa transakcja" class="green-button">
-			</div>
-			<div>
-				<input type="submit" value="Nowy użytkownik" class="green-button">
-			</div>
-		</form>
+		<div>
+				
+			<button id="newTransaction" class="green-button">New Transaction</button>
+
+		</div>
+		<div>
+		<button id="newClient" class="green-button">New Client</button>
+
+		</div>
+
+		<script type="text/javascript">
+			document.getElementById("newTransaction").onclick = function () {
+				location.href = "http://localhost/zamowienie";
+			};
+
+			document.getElementById("newClient").onclick = function () {
+				location.href = "http://localhost/nowygosc";
+			};
+		</script>
 	</body>
 </html>		
