@@ -8,9 +8,19 @@ app.use(bodyParser.json());
 
 const port = 80;
 
-app.post('/clients', (req, res) => {
-    repository.insertClient(req.body)
+app.post('/client', (req, res) => {
+    //repository.insertClient(req.body)
     res.send('Client inserted')
+});
+
+app.post('/request', (req, res) => {
+    //repository.insertRequest(req.body)
+    res.send('Request inserted')
+});
+
+app.post('/type', (req, res) => {
+    //repository.insertRequest(req.body)
+    res.send('Apple type inserted')
 });
 
 app.get('/', (req, res) => {
